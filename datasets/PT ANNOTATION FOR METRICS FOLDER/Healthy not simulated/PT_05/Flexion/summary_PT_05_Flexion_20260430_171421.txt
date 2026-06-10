@@ -1,0 +1,37 @@
+==================================================
+  REHABILITATION SESSION SUMMARY REPORT
+==================================================
+
+Participant ID: PT_05
+Affected Side: Left
+Exercise(s): Flexion
+Date: 2026-04-30 17:17:26
+Total Sets: 2
+
+--------------------------------------------------
+  PERFORMANCE METRICS
+--------------------------------------------------
+Total Repetitions: 20
+Correct ROM (>=150 deg): 20 (100.0%)
+Insufficient ROM: 0 (0.0%)
+Average Peak Angle: 168.4 deg
+
+--------------------------------------------------
+  COMPENSATION ANALYSIS
+--------------------------------------------------
+Trunk Lean Detected: 0 reps (0.0%)
+Shoulder Hiking Detected: 0 reps (0.0%)
+
+--------------------------------------------------
+  DETERIORATION INDICATORS
+--------------------------------------------------
+Medium Deterioration Events: 0
+High Deterioration Events: 0
+
+--------------------------------------------------
+  OVERALL ASSESSMENT
+--------------------------------------------------
+Rating: EXCELLENT
+Notes: Patient shows good ROM and minimal compensation.
+
+==================================================

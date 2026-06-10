@@ -1,0 +1,63 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export
+# Participant ID: PT_05
+# Exercise Type: Abduction
+# Session Date: 2026-04-30 17:14:06
+# Affected Side: Left
+# Total Sets: 2
+# Session Notes: (none)
+# Average FPS: 19.7
+#
+# Abduction Block 1 Set 1 Baseline ROM: 179.6°
+# Abduction Block 1 Set 1 Baseline Duration: 104 frames
+# Abduction Block 1 Set 2 Baseline ROM: 179.2°
+# Abduction Block 1 Set 2 Baseline Duration: 92 frames
+# MediaPipe Model Complexity: 1
+# MediaPipe Detection Confidence: 0.5
+# MediaPipe Tracking Confidence: 0.5
+# Reps Per Set Target: 10
+# ROM Threshold (correct): ≥150°
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%
+# Sliding Window Size: 5 reps
+#
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+PT_05,1,Left,1,1,2026-04-30T17:11:55.556278,Abduction,179.9,85,correct,False,True,False,True,Low,,False,False,False,0,0,0
+PT_05,1,Left,1,2,2026-04-30T17:12:01.981489,Abduction,179.6,104,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,3,2026-04-30T17:12:08.197609,Abduction,179.7,104,correct,False,True,False,True,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,4,2026-04-30T17:12:14.326873,Abduction,179.6,106,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,1,5,2026-04-30T17:12:20.222196,Abduction,180.0,101,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,1,6,2026-04-30T17:12:25.803987,Abduction,179.5,94,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,1,7,2026-04-30T17:12:31.682628,Abduction,179.9,100,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,1,8,2026-04-30T17:12:37.263246,Abduction,179.9,94,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,1,9,2026-04-30T17:12:42.864921,Abduction,179.9,91,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,1,10,2026-04-30T17:12:48.100495,Abduction,179.7,84,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,2,1,2026-04-30T17:13:08.615420,Abduction,179.6,96,correct,False,True,False,True,Low,,False,False,False,0,0,0
+PT_05,1,Left,2,2,2026-04-30T17:13:14.738482,Abduction,179.2,101,correct,False,True,False,True,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,3,2026-04-30T17:13:20.354359,Abduction,179.9,92,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,4,2026-04-30T17:13:25.813971,Abduction,179.2,88,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,2,5,2026-04-30T17:13:31.273101,Abduction,179.7,90,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,2,6,2026-04-30T17:13:36.140782,Abduction,179.8,80,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,2,7,2026-04-30T17:13:41.144478,Abduction,178.9,81,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,8,2026-04-30T17:13:46.250347,Abduction,179.4,82,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,2,9,2026-04-30T17:13:51.232057,Abduction,179.9,78,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+PT_05,1,Left,2,10,2026-04-30T17:13:56.113437,Abduction,179.9,71,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+
+# SESSION SUMMARY
+# Total Reps: 20
+# Correct ROM: 20 (100.0%)
+# Insufficient ROM: 0 (0.0%)
+# Average Peak Angle: 179.7°
+# Average Duration: 91.1 frames
+# Trunk Lean Detected: 0 reps (0.0%)
+# Shoulder Hiking Detected: 10 reps (50.0%)
+# Medium Deterioration Events: 0
+# High Deterioration Events: 0
+# Micro-Breaks Triggered: 0
+# Stop Alerts: 0
+#
+# ANOMALIES DETECTED:
+# - 5 rep(s) with unusually long duration (>100 frames):
+#   Set 1, Rep 2: 104 frames
+#   Set 1, Rep 3: 104 frames
+#   Set 1, Rep 4: 106 frames
+#   Set 1, Rep 5: 101 frames
+#   Set 2, Rep 2: 101 frames

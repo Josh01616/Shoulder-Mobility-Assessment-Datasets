@@ -1,0 +1,37 @@
+==================================================
+  REHABILITATION SESSION SUMMARY REPORT
+==================================================
+
+Participant ID: SP_03
+Affected Side: Right
+Exercise(s): Abduction
+Date: 2026-05-07 12:58:52
+Total Sets: 2
+
+--------------------------------------------------
+  PERFORMANCE METRICS
+--------------------------------------------------
+Total Repetitions: 10
+Correct ROM (>=150 deg): 0 (0.0%)
+Insufficient ROM: 10 (100.0%)
+Average Peak Angle: 98.8 deg
+
+--------------------------------------------------
+  COMPENSATION ANALYSIS
+--------------------------------------------------
+Trunk Lean Detected: 0 reps (0.0%)
+Shoulder Hiking Detected: 0 reps (0.0%)
+
+--------------------------------------------------
+  DETERIORATION INDICATORS
+--------------------------------------------------
+Medium Deterioration Events: 0
+High Deterioration Events: 0
+
+--------------------------------------------------
+  OVERALL ASSESSMENT
+--------------------------------------------------
+Rating: REQUIRES ATTENTION
+Notes: Significant difficulties observed. PT review recommended.
+
+==================================================

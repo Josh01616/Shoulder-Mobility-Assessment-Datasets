@@ -1,0 +1,70 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export,,,,,,,,,,,,,,,,,,,,,
+# Participant ID: SM_04,,,,,,,,,,,,,,,,,,,,,
+# Exercise Type: Flexion,,,,,,,,,,,,,,,,,,,,,
+# Session Date: 2026-05-06 17:23:57,,,,,,,,,,,,,,,,,,,,,
+# Affected Side: Right,,,,,,,,,,,,,,,,,,,,,
+# Total Sets: 3,,,,,,,,,,,,,,,,,,,,,
+# Session Notes: (none),,,,,,,,,,,,,,,,,,,,,
+# Average FPS: 18.1,,,,,,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,,,,,,
+# Flexion Block 1 Set 1 Baseline ROM: 148.5°,,,,,,,,,,,,,,,,,,,,,
+# Flexion Block 1 Set 1 Baseline Duration: 15 frames,,,,,,,,,,,,,,,,,,,,,
+# Flexion Block 1 Set 2 Baseline ROM: 106.5°,,,,,,,,,,,,,,,,,,,,,
+# Flexion Block 1 Set 2 Baseline Duration: 16 frames,,,,,,,,,,,,,,,,,,,,,
+# Flexion Block 1 Set 3 Baseline ROM: 152.7°,,,,,,,,,,,,,,,,,,,,,
+# Flexion Block 1 Set 3 Baseline Duration: 28 frames,,,,,,,,,,,,,,,,,,,,,
+# MediaPipe Model Complexity: 1,,,,,,,,,,,,,,,,,,,,,
+# MediaPipe Detection Confidence: 0.5,,,,,,,,,,,,,,,,,,,,,
+# MediaPipe Tracking Confidence: 0.5,,,,,,,,,,,,,,,,,,,,,
+# Reps Per Set Target: 10,,,,,,,,,,,,,,,,,,,,,
+# ROM Threshold (correct): ≥150°,,,,,,,,,,,,,,,,,,,,,
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%,,,,,,,,,,,,,,,,,,,
+# Sliding Window Size: 5 reps,,,,,,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,,,,,,
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+SM_04,1,Right,1,1,2026-05-06T17:21:41.678716,Flexion,142.7,15,correct,FALSE,TRUE,FALSE,FALSE,Low,,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,2,2026-05-06T17:21:43.110464,Flexion,110.7,11,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,3,2026-05-06T17:21:44.772729,Flexion,148.5,15,correct,TRUE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,4,2026-05-06T17:21:47.101686,Flexion,159.5,24,correct,TRUE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,5,2026-05-06T17:21:50.478176,Flexion,179.9,39,correct,TRUE,TRUE,TRUE,FALSE,Medium,50,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,6,2026-05-06T17:21:54.960630,Flexion,173.2,55,correct,TRUE,TRUE,TRUE,FALSE,Medium,50,TRUE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,7,2026-05-06T17:21:59.658925,Flexion,176.6,53,correct,FALSE,TRUE,TRUE,FALSE,Medium,50,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,8,2026-05-06T17:22:05.150453,Flexion,175.8,71,correct,FALSE,TRUE,TRUE,FALSE,Medium,50,TRUE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,9,2026-05-06T17:22:07.994451,Flexion,142,27,correct,FALSE,TRUE,FALSE,FALSE,Low,0,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,1,10,2026-05-06T17:22:10.714608,Flexion,135.5,20,correct,TRUE,TRUE,FALSE,FALSE,Low,0,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,1,2026-05-06T17:22:37.316669,Flexion,147.1,16,correct,TRUE,TRUE,FALSE,FALSE,Low,,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,2,2026-05-06T17:22:39.110401,Flexion,90.9,16,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,3,2026-05-06T17:22:40.847271,Flexion,111.6,15,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,4,2026-05-06T17:22:42.900403,Flexion,106.5,20,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,5,2026-05-06T17:22:44.703913,Flexion,134.6,14,correct,TRUE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,6,2026-05-06T17:22:46.210485,Flexion,115,13,correct,TRUE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,7,2026-05-06T17:22:47.917346,Flexion,130.2,14,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,8,2026-05-06T17:22:49.866616,Flexion,154.8,19,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,9,2026-05-06T17:22:51.816675,Flexion,141.8,19,correct,TRUE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,2,10,2026-05-06T17:22:53.772710,Flexion,146.8,18,correct,TRUE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,1,2026-05-06T17:23:17.057348,Flexion,152.6,20,correct,FALSE,TRUE,FALSE,FALSE,Low,,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,2,2026-05-06T17:23:19.178246,Flexion,120.2,28,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,3,2026-05-06T17:23:22.662480,Flexion,152.7,26,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,4,2026-05-06T17:23:25.741364,Flexion,158.2,36,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,5,2026-05-06T17:23:29.070689,Flexion,146.7,34,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,6,2026-05-06T17:23:32.607334,Flexion,153.3,38,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,7,2026-05-06T17:23:35.793509,Flexion,156,31,correct,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,8,2026-05-06T17:23:39.240454,Flexion,154.2,37,correct,FALSE,TRUE,FALSE,FALSE,Low,28.82,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,9,2026-05-06T17:23:43.732876,Flexion,154.3,56,correct,FALSE,TRUE,FALSE,FALSE,Medium,50,FALSE,FALSE,FALSE,0,0,0
+SM_04,1,Right,3,10,2026-05-06T17:23:46.920751,Flexion,151.5,25,correct,FALSE,TRUE,FALSE,FALSE,Medium,50,TRUE,FALSE,FALSE,0,0,0
+,,,,,,,,,,,,,,,,,,,,,
+# SESSION SUMMARY,,,,,,,,,,,,,,,,,,,,,
+# Total Reps: 30,,,,,,,,,,,,,,,,,,,,,
+# Correct ROM: 14 (46.7%),,,,,,,,,,,,,,,,,,,,,
+# Insufficient ROM: 16 (53.3%),,,,,,,,,,,,,,,,,,,,,
+# Average Peak Angle: 144.1°,,,,,,,,,,,,,,,,,,,,,
+# Average Duration: 27.5 frames,,,,,,,,,,,,,,,,,,,,,
+# Trunk Lean Detected: 4 reps (13.3%),,,,,,,,,,,,,,,,,,,,,
+# Shoulder Hiking Detected: 0 reps (0.0%),,,,,,,,,,,,,,,,,,,,,
+# Medium Deterioration Events: 6,,,,,,,,,,,,,,,,,,,,,
+# High Deterioration Events: 0,,,,,,,,,,,,,,,,,,,,,
+# Micro-Breaks Triggered: 3,,,,,,,,,,,,,,,,,,,,,
+# Stop Alerts: 0,,,,,,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,,,,,,
+# ANOMALIES DETECTED:,,,,,,,,,,,,,,,,,,,,,
+# - None detected,,,,,,,,,,,,,,,,,,,,,

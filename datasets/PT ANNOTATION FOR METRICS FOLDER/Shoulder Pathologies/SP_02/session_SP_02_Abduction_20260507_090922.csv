@@ -1,0 +1,62 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export
+# Participant ID: SP_02
+# Exercise Type: Abduction
+# Session Date: 2026-05-07 09:12:04
+# Affected Side: Right
+# Total Sets: 2
+# Session Notes: (none)
+# Average FPS: 18.2
+#
+# Abduction Block 1 Set 1 Baseline ROM: 125.8°
+# Abduction Block 1 Set 1 Baseline Duration: 100 frames
+# Abduction Block 1 Set 2 Baseline ROM: 128.1°
+# Abduction Block 1 Set 2 Baseline Duration: 91 frames
+# MediaPipe Model Complexity: 1
+# MediaPipe Detection Confidence: 0.5
+# MediaPipe Tracking Confidence: 0.5
+# Reps Per Set Target: 10
+# ROM Threshold (correct): ≥150°
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%
+# Sliding Window Size: 5 reps
+#
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+SP_02,1,Right,1,1,2026-05-07T09:09:42.012788,Abduction,132.1,130,insufficient,False,True,False,True,Low,,False,False,False,0,0,0
+SP_02,1,Right,1,2,2026-05-07T09:09:49.343058,Abduction,125.8,107,insufficient,False,True,False,True,Low,10.0,False,False,False,0,0,0
+SP_02,1,Right,1,3,2026-05-07T09:09:57.382420,Abduction,122.9,94,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02,1,Right,1,4,2026-05-07T09:10:05.230752,Abduction,132.5,100,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,1,5,2026-05-07T09:10:11.907827,Abduction,122.6,78,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,1,6,2026-05-07T09:10:18.080889,Abduction,128.8,90,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,1,7,2026-05-07T09:10:23.495430,Abduction,129.6,72,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,1,8,2026-05-07T09:10:28.684495,Abduction,125.4,74,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,1,9,2026-05-07T09:10:33.643372,Abduction,129.6,73,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,1,10,2026-05-07T09:10:38.984292,Abduction,127.9,77,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,2,1,2026-05-07T09:11:03.642855,Abduction,125.3,96,insufficient,False,True,False,True,Low,,False,False,False,0,0,0
+SP_02,1,Right,2,2,2026-05-07T09:11:09.761836,Abduction,129.0,91,insufficient,False,True,False,True,Low,10.0,False,False,False,0,0,0
+SP_02,1,Right,2,3,2026-05-07T09:11:15.734605,Abduction,128.1,93,insufficient,False,True,False,True,Low,10.0,False,False,False,0,0,0
+SP_02,1,Right,2,4,2026-05-07T09:11:20.774116,Abduction,127.8,79,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,2,5,2026-05-07T09:11:25.834198,Abduction,122.8,74,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,2,6,2026-05-07T09:11:31.280811,Abduction,134.0,79,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,2,7,2026-05-07T09:11:36.933910,Abduction,126.4,80,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,2,8,2026-05-07T09:11:42.323657,Abduction,134.2,81,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,2,9,2026-05-07T09:11:47.812431,Abduction,128.7,81,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SP_02,1,Right,2,10,2026-05-07T09:11:53.210910,Abduction,129.6,80,insufficient,False,True,False,True,Low,10.0,False,False,True,0,0,0
+
+# SESSION SUMMARY
+# Total Reps: 20
+# Correct ROM: 0 (0.0%)
+# Insufficient ROM: 20 (100.0%)
+# Average Peak Angle: 128.2°
+# Average Duration: 86.5 frames
+# Trunk Lean Detected: 0 reps (0.0%)
+# Shoulder Hiking Detected: 14 reps (70.0%)
+# Medium Deterioration Events: 0
+# High Deterioration Events: 0
+# Micro-Breaks Triggered: 0
+# Stop Alerts: 0
+#
+# ANOMALIES DETECTED:
+# - 2 rep(s) with unusually long duration (>100 frames):
+#   Set 1, Rep 1: 130 frames
+#   Set 1, Rep 2: 107 frames
+# - High shoulder hiking rate: 70.0% (>50% threshold)
+#   Consider checking threshold sensitivity or form execution

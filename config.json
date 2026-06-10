@@ -1,0 +1,469 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "description": "Shoulder Mobility Assessment System - Configurable Thresholds",
+    "last_updated": "2026-04-07",
+    "note": "All thresholds are pilot-tuned. Adjust based on patient population and clinical judgment."
+  },
+  "mediapipe": {
+    "detection_confidence": {
+      "value": 0.5,
+      "description": "Minimum confidence for initial pose detection (new person appearing)",
+      "valid_range": [
+        0.1,
+        1.0
+      ],
+      "clinical_note": "Lower for poor lighting; higher to reduce false detections"
+    },
+    "tracking_confidence": {
+      "value": 0.5,
+      "description": "Minimum confidence for frame-to-frame pose tracking",
+      "valid_range": [
+        0.1,
+        1.0
+      ],
+      "clinical_note": "Lower for faster movement; higher for more reliable landmarks"
+    }
+  },
+  "session": {
+    "reps_per_set": {
+      "value": 10,
+      "unit": "reps",
+      "description": "Target number of repetitions per set for automatic set-complete detection",
+      "valid_range": [
+        3,
+        30
+      ],
+      "clinical_note": "Typical frozen shoulder rehab: 10-15 reps. Set to 0 to disable auto-detection."
+    },
+    "total_sets": {
+      "value": 2,
+      "unit": "sets",
+      "description": "Number of sets per exercise session",
+      "valid_range": [
+        1,
+        10
+      ],
+      "clinical_note": "Standard frozen shoulder protocol: 3 sets. Adjust for patient tolerance."
+    },
+    "smoothing_window": {
+      "value": 5,
+      "unit": "frames",
+      "description": "Moving average window size for angle smoothing in rep segmentation",
+      "valid_range": [
+        3,
+        15
+      ],
+      "clinical_note": "Smaller = more responsive; larger = more stable. 5 @ 30 FPS ≈ 0.17 sec."
+    }
+  },
+  "rom_classification": {
+    "value": 150,
+    "unit": "degrees",
+    "description": "Minimum peak angle to classify a rep as 'correct' ROM",
+    "research_basis": "Gill et al. (2020) - mean abduction ~150° in healthy adults (N=2404)",
+    "valid_range": [
+      120,
+      180
+    ],
+    "clinical_note": "Lower for patients with severe adhesive capsulitis; raise for advanced rehab stages"
+  },
+  "rep_tracking": {
+    "abduction": {
+      "start_threshold": {
+        "value": 40,
+        "unit": "degrees",
+        "description": "Angle to enter 'in-rep' state for abduction exercise",
+        "research_basis": "Frontal view baseline ~21-25° due to natural arm hang angle",
+        "valid_range": [
+          25,
+          60
+        ],
+        "clinical_note": "Higher than flexion due to frontal view baseline offset"
+      },
+      "end_threshold": {
+        "value": 30,
+        "unit": "degrees",
+        "description": "Angle to exit 'in-rep' state (hysteresis gap = 10°)",
+        "research_basis": "Canny (1986) hysteresis principle for noise reduction",
+        "valid_range": [
+          15,
+          50
+        ],
+        "clinical_note": "Must be lower than start_threshold to prevent oscillation"
+      }
+    },
+    "flexion": {
+      "start_threshold": {
+        "value": 30,
+        "unit": "degrees",
+        "description": "Angle to enter 'in-rep' state for flexion exercise",
+        "research_basis": "Lateral view baseline ~0-8° (arm aligns with trunk vector)",
+        "valid_range": [
+          20,
+          50
+        ],
+        "clinical_note": "Lower than abduction due to lateral view baseline"
+      },
+      "end_threshold": {
+        "value": 20,
+        "unit": "degrees",
+        "description": "Angle to exit 'in-rep' state (hysteresis gap = 10°)",
+        "research_basis": "Canny (1986) hysteresis principle for noise reduction",
+        "valid_range": [
+          10,
+          40
+        ],
+        "clinical_note": "Must be lower than start_threshold to prevent oscillation"
+      }
+    },
+    "min_peak_distance": {
+      "value": 15,
+      "unit": "frames",
+      "description": "Minimum frames between peaks to prevent double-counting",
+      "research_basis": "~0.5 sec @ 30 FPS; Coates & Wahlström (2023) turning-point guards",
+      "valid_range": [
+        10,
+        30
+      ],
+      "clinical_note": "Increase if patients move very slowly"
+    },
+    "min_peak_prominence": {
+      "value": 20,
+      "unit": "degrees",
+      "description": "Minimum peak height above start threshold for valid rep",
+      "research_basis": "Hsu et al. (2023) viewpoint-invariant rep counting",
+      "valid_range": [
+        10,
+        40
+      ],
+      "clinical_note": "Lower for patients with very limited ROM"
+    }
+  },
+  "compensation_detection": {
+    "trunk_lean": {
+      "value": 10,
+      "unit": "degrees",
+      "description": "Maximum trunk deviation from vertical before flagging compensation",
+      "research_basis": "Nakatsuchi et al. 2021, Christensen et al. 2021 (analogous movements)",
+      "valid_range": [
+        10,
+        25
+      ],
+      "clinical_note": "Increase for patients with postural issues unrelated to compensation"
+    },
+    "shoulder_hiking": {
+      "value": 55,
+      "unit": "percent",
+      "description": "Shoulder asymmetry ratio threshold (affected vs unaffected side) — thesis §3.6.4: 45%",
+      "research_basis": "Thesis §3.6.4: 45% shoulder asymmetry. Pilot-tuned from Mohamed et al. 2020.",
+      "valid_range": [
+        15,
+        60
+      ],
+      "clinical_note": "Higher threshold = fewer false positives but may miss subtle hiking"
+    },
+    "trunk_lean_persistence": {
+      "value": 0.15,
+      "unit": "ratio",
+      "description": "Fraction of rep frames where trunk lean must be detected to flag the rep (persistence filter)",
+      "valid_range": [
+        0.1,
+        0.8
+      ],
+      "clinical_note": "Higher = requires more sustained lean to flag (fewer false positives). Lower = more sensitive."
+    },
+    "shoulder_hiking_persistence": {
+      "value": 0.15,
+      "unit": "ratio",
+      "description": "Fraction of rep frames where shoulder hiking must be detected to flag the rep (persistence filter)",
+      "valid_range": [
+        0.1,
+        0.8
+      ],
+      "clinical_note": "Higher = requires more sustained hiking to flag (fewer false positives). Lower = more sensitive."
+    }
+  },
+  "spatial_temporal_filtering": {
+    "cwema_alpha_base": {
+      "value": 0.4,
+      "unit": "dimensionless",
+      "description": "Base EMA smoothing factor (α) for confidence-weighted exponential moving average",
+      "research_basis": "Thesis computational contribution - CW-EMA landmark smoothing",
+      "valid_range": [
+        0.1,
+        0.9
+      ],
+      "clinical_note": "Lower = more smoothing (lag); higher = more responsive (noise). 0.4 typical for 30 FPS video.",
+      "loso_tuning": true
+    },
+    "cwema_c_floor": {
+      "value": 0.05,
+      "unit": "dimensionless",
+      "description": "Minimum confidence floor for EMA alpha computation",
+      "research_basis": "Thesis - prevents effective alpha from collapsing to near-zero when confidence momentarily dips",
+      "valid_range": [
+        0.01,
+        0.3
+      ],
+      "clinical_note": "Prevents loss of responsiveness during low-confidence frames. Typical: 5% of max confidence."
+    },
+    "bone_length_beta": {
+      "value": 0.7,
+      "unit": "dimensionless",
+      "description": "Bone-Length Constancy (BLC) geometric foreshortening threshold: frames where L_t / L_baseline < beta are flagged as unreliable (fixed design constant; see loso_cv_tuning frozen_params for justification)",
+      "research_basis": "Thesis - BLC validates joints maintain anatomically consistent distances",
+      "valid_range": [
+        0.5,
+        1.0
+      ],
+      "clinical_note": "Higher penalty = more aggressive unscorable rep flagging when anatomy violated.",
+      "loso_tuning": true
+    },
+    "bone_length_segment": {
+      "value": "left_shoulder_elbow",
+      "unit": "string",
+      "description": "MediaPipe segment to use as baseline bone length (right arm when affected_side='Left')",
+      "research_basis": "Thesis - uses anthropometric constancy; ~0.4-0.6 of torso in FS demographics",
+      "valid_range": [
+        "left_shoulder_elbow",
+        "left_elbow_wrist",
+        "left_hip_knee",
+        "right_shoulder_elbow"
+      ],
+      "clinical_note": "Should be upper limb segment for shoulder exercises. Swapped based on affected_side."
+    },
+    "sma_window_size": {
+      "value": 5,
+      "unit": "frames",
+      "description": "Simple moving average window size for SMA pipeline (comparison baseline)",
+      "research_basis": "Thesis - enables ablation study with SMA as traditional smoothing comparison",
+      "valid_range": [
+        3,
+        15
+      ],
+      "clinical_note": "Smaller = less lag; larger = more stable. 5 @ 30 FPS ≈ 0.17 sec."
+    },
+    "unscorable_frame_pct": {
+      "value": 0.20,
+      "unit": "ratio",
+      "description": "Threshold for flagging rep as unscorable if >N% of frames violate BLC constraint",
+      "research_basis": "Thesis - automates detection of reps with tracking instability or occlusion",
+      "valid_range": [
+        0.1,
+        0.5
+      ],
+      "clinical_note": "Lower = more strict; higher = more forgiving. 20% typical (allow brief occlusions)."
+    }
+  },
+  "fatigue_detection": {
+    "duration_absolute_cap": {
+      "value": 240,
+      "unit": "frames",
+      "description": "Absolute maximum duration for a valid rep (~8 seconds at 30 FPS)",
+      "research_basis": "Thesis §3.7 - prevents inclusion of extremely slow reps with tracking artifacts",
+      "valid_range": [
+        100,
+        500
+      ],
+      "clinical_note": "Set to 240 frames (~8 sec) for 30 FPS video. Scales appropriately with frame rate. Works with relative cap (3× baseline)."
+    },
+    "medium_threshold": {
+      "value": 10,
+      "unit": "percent",
+      "description": "ROM decline or duration increase to trigger 'Medium' fatigue",
+      "research_basis": "Conservative given ~6% measurement variability (docs/Temporal_Fatigue_Research.md)",
+      "valid_range": [
+        5,
+        15
+      ],
+      "clinical_note": "Lower = more sensitive (earlier warnings); higher = fewer interruptions"
+    },
+    "high_threshold": {
+      "value": 20,
+      "unit": "percent",
+      "description": "ROM decline or duration increase to trigger 'High' fatigue",
+      "research_basis": "2x medium threshold for clear escalation",
+      "valid_range": [
+        15,
+        30
+      ],
+      "clinical_note": "Triggers longer break recommendation"
+    },
+    "severe_threshold": {
+      "value": 30,
+      "unit": "percent",
+      "description": "ROM decline to trigger stop rule (session termination recommendation)",
+      "research_basis": "Safety margin for preventing overexertion",
+      "valid_range": [
+        25,
+        40
+      ],
+      "clinical_note": "Critical safety threshold - adjust with caution"
+    },
+    "window_size": {
+      "value": 5,
+      "unit": "reps",
+      "description": "Sliding window of valid reps for fatigue metric calculation",
+      "research_basis": "Balance between responsiveness and noise reduction",
+      "valid_range": [
+        3,
+        10
+      ],
+      "clinical_note": "Smaller = more responsive; larger = more stable"
+    },
+    "cooldown_reps": {
+      "value": 2,
+      "unit": "reps",
+      "description": "Minimum reps after break before another break can be triggered",
+      "research_basis": "Prevents break prompt spam; reduced to 2 for 10-rep evaluation sets",
+      "valid_range": [
+        2,
+        5
+      ],
+      "clinical_note": "Set to 2 to allow a second fatigue trigger within a 10-rep set if needed"
+    },
+    "break_durations": {
+      "medium": {
+        "value": 15,
+        "unit": "seconds",
+        "description": "Recommended break duration for Medium fatigue"
+      },
+      "high": {
+        "value": 30,
+        "unit": "seconds",
+        "description": "Recommended break duration for High fatigue"
+      }
+    },
+    "use_fuzzy_inference": {
+      "value": true,
+      "description": "Enables Mamdani fuzzy inference for performance deterioration scoring and micro-break prompting. When false, the system uses the threshold-based fallback mode.",
+      "research_basis": "Thesis §3.7 - Mamdani fuzzy inference is the default module for deterioration scoring, with threshold-based mode retained as a fallback for comparison and troubleshooting.",
+      "clinical_note": "Both modes produce Low/Medium/High deterioration levels. Set to false only when running threshold-based fallback comparisons or troubleshooting."
+    },
+    "compensation_escalation": {
+      "value": 2,
+      "unit": "reps",
+      "description": "Number of reps with compensation flags in the window before triggering a form cue",
+      "valid_range": [
+        1,
+        5
+      ],
+      "clinical_note": "Lower = more sensitive form warnings (catch subtle compensation earlier); higher = only flag clear/repeated compensation"
+    },
+    "min_valid_reps_for_trigger": {
+      "value": 3,
+      "unit": "reps",
+      "description": "Minimum valid reps in window before any fatigue trigger is allowed (prevents early false alarms)",
+      "valid_range": [
+        2,
+        5
+      ],
+      "clinical_note": "Raise to 4-5 if early-session false fatigue triggers are observed; lower to 2 for patients with very short sets"
+    },
+    "consecutive_windows_required": {
+      "value": 2,
+      "unit": "windows",
+      "description": "Number of consecutive qualifying fatigue windows required before triggering a break (persistence filter)",
+      "valid_range": [
+        1,
+        3
+      ],
+      "clinical_note": "1 = trigger on first sign of fatigue (more sensitive); 2 = require two reps in a row (default, fewer false triggers)"
+    },
+    "fuzzy_threshold_low": {
+      "value": 40.0,
+      "unit": "score (0-100)",
+      "description": "Fuzzy deterioration score above which fatigue is classified as Medium (below = Low)",
+      "valid_range": [
+        20.0,
+        55.0
+      ],
+      "clinical_note": "Lower = classify Medium fatigue earlier (more cautious); higher = require stronger signal before escalating"
+    },
+    "fuzzy_threshold_high": {
+      "value": 60.0,
+      "unit": "score (0-100)",
+      "description": "Fuzzy deterioration score above which fatigue is classified as High (below threshold_low = Low)",
+      "valid_range": [
+        45.0,
+        80.0
+      ],
+      "clinical_note": "Must be greater than fuzzy_threshold_low. Lower = escalate to High sooner; higher = reserve High for clear fatigue only"
+    }
+  },
+  "report_interpretation": {
+    "correct_rom_good_pct": {
+      "value": 70,
+      "unit": "percent",
+      "description": "Minimum correct ROM percentage to label session as 'Good' in reports",
+      "valid_range": [
+        50,
+        90
+      ],
+      "clinical_note": "Lower for severe cases; higher for advanced rehab stages"
+    },
+    "avg_peak_good_angle": {
+      "value": 150,
+      "unit": "degrees",
+      "description": "Minimum average peak angle to label session performance as 'Good'",
+      "valid_range": [
+        120,
+        180
+      ],
+      "clinical_note": "Matches ROM classification threshold by default"
+    },
+    "compensation_acceptable_pct": {
+      "value": 0.2,
+      "unit": "ratio",
+      "description": "Maximum fraction of reps with compensation before labeling as 'Frequent'",
+      "valid_range": [
+        0.1,
+        0.5
+      ],
+      "clinical_note": "20% default: up to 2 of 10 reps with compensation is acceptable"
+    },
+    "high_fatigue_significant_count": {
+      "value": 3,
+      "unit": "events",
+      "description": "Number of high-fatigue events before labeling as 'Significant' in reports",
+      "valid_range": [
+        1,
+        5
+      ],
+      "clinical_note": "Lower = more conservative fatigue reporting"
+    },
+    "high_compensation_rate_pct": {
+      "value": 0.5,
+      "unit": "ratio",
+      "description": "Compensation rate threshold for CSV anomaly flag (>50% of reps)",
+      "valid_range": [
+        0.3,
+        0.8
+      ],
+      "clinical_note": "Flags sessions with unusually high compensation for review"
+    }
+  },
+  "calibration": {
+    "calibration_duration_sec": {
+      "value": 10.0,
+      "unit": "seconds",
+      "description": "Duration of the calibration countdown window",
+      "valid_range": [
+        2.0,
+        10.0
+      ],
+      "clinical_note": "10 seconds provides adequate stabilization time for frozen-shoulder patients with limited mobility and postural instability."
+    },
+    "calibration_jitter_threshold_px": {
+      "value": 40.0,
+      "unit": "pixels",
+      "description": "Maximum acceptable standard deviation of landmark position during calibration",
+      "valid_range": [
+        5.0,
+        50.0
+      ],
+      "clinical_note": "Default 40px. Lower = stricter stability requirement. Higher = more forgiving for natural sway and high-resolution webcams."
+    }
+  }
+}

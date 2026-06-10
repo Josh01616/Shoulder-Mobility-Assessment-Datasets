@@ -1,0 +1,6 @@
+participant_id,participant_type,affected_side,abduction_available,flexion_available,sets_per_exercise,reps_per_set,include_in_metrics,notes
+PT_01,controlled_validation,Right,Yes,Yes,2,10,Yes,Healthy/expert-supervised validation data; not diagnosed frozen shoulder unless separately documented.
+PT_02,controlled_validation,Left,Yes,Yes,2,10,Yes,Healthy/expert-supervised validation data; not diagnosed frozen shoulder unless separately documented.
+PT_03,controlled_validation,Right,Yes,Yes,2,10,Yes,Healthy/expert-supervised validation data; not diagnosed frozen shoulder unless separately documented.
+PT_04,controlled_validation,Left,Yes,Yes,2,10,Yes,Healthy/expert-supervised validation data; not diagnosed frozen shoulder unless separately documented.
+PT_05,controlled_validation,Left,Yes,Yes,2,10,Yes,Healthy/expert-supervised validation data; not diagnosed frozen shoulder unless separately documented.

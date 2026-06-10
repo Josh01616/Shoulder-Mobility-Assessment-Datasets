@@ -1,0 +1,61 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export,,,,,,,,,,,,,,,,,,,,,
+# Participant ID: SP_03_ADJUSTED,,,,,,,,,,,,,,,,,,,,,
+# Exercise Type: Abduction,,,,,,,,,,,,,,,,,,,,,
+# Session Date: 2026-05-07 13:19:58,,,,,,,,,,,,,,,,,,,,,
+# Affected Side: Right,,,,,,,,,,,,,,,,,,,,,
+# Total Sets: 2,,,,,,,,,,,,,,,,,,,,,
+# Session Notes: (none),,,,,,,,,,,,,,,,,,,,,
+# Average FPS: 12.8,,,,,,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,,,,,,
+# Abduction Block 1 Set 1 Baseline ROM: 126.2°,,,,,,,,,,,,,,,,,,,,,
+# Abduction Block 1 Set 1 Baseline Duration: 99 frames,,,,,,,,,,,,,,,,,,,,,
+# Abduction Block 1 Set 2 Baseline ROM: 128.5°,,,,,,,,,,,,,,,,,,,,,
+# Abduction Block 1 Set 2 Baseline Duration: 91 frames,,,,,,,,,,,,,,,,,,,,,
+# MediaPipe Model Complexity: 1,,,,,,,,,,,,,,,,,,,,,
+# MediaPipe Detection Confidence: 0.5,,,,,,,,,,,,,,,,,,,,,
+# MediaPipe Tracking Confidence: 0.5,,,,,,,,,,,,,,,,,,,,,
+# Reps Per Set Target: 10,,,,,,,,,,,,,,,,,,,,,
+# ROM Threshold (correct): ≥150°,,,,,,,,,,,,,,,,,,,,,
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%,,,,,,,,,,,,,,,,,,,
+# Sliding Window Size: 5 reps,,,,,,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,,,,,,
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+SP_02_ADJUSTED,1,Right,1,1,2026-05-07T13:16:08.724214,Abduction,132.1,130,insufficient,FALSE,TRUE,TRUE,FALSE,Low,,FALSE,FALSE,FALSE,0,0,0
+SP_02_ADJUSTED,1,Right,1,2,2026-05-07T13:16:19.249746,Abduction,126.2,107,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SP_02_ADJUSTED,1,Right,1,3,2026-05-07T13:16:29.443497,Abduction,123.1,94,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SP_02_ADJUSTED,1,Right,1,4,2026-05-07T13:16:38.961980,Abduction,133.1,99,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,1,5,2026-05-07T13:16:47.234401,Abduction,122.8,77,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,1,6,2026-05-07T13:16:56.099724,Abduction,128.6,90,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,1,7,2026-05-07T13:17:03.109627,Abduction,129.8,72,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,1,8,2026-05-07T13:17:10.343290,Abduction,125.7,74,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,1,9,2026-05-07T13:17:17.617863,Abduction,129.7,73,insufficient,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,1,10,2026-05-07T13:17:25.660978,Abduction,128.3,77,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,2,1,2026-05-07T13:18:07.692929,Abduction,125.8,97,insufficient,FALSE,TRUE,TRUE,FALSE,Low,,FALSE,FALSE,FALSE,0,0,0
+SP_02_ADJUSTED,1,Right,2,2,2026-05-07T13:18:16.818201,Abduction,129.1,91,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SP_02_ADJUSTED,1,Right,2,3,2026-05-07T13:18:25.828415,Abduction,128.5,92,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,FALSE,0,0,0
+SP_02_ADJUSTED,1,Right,2,4,2026-05-07T13:18:33.218009,Abduction,128.2,78,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,2,5,2026-05-07T13:18:40.560998,Abduction,123.3,74,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,2,6,2026-05-07T13:18:48.065619,Abduction,134.1,79,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,2,7,2026-05-07T13:18:56.307990,Abduction,126.5,80,insufficient,FALSE,TRUE,FALSE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,2,8,2026-05-07T13:19:04.036215,Abduction,133.6,81,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,2,9,2026-05-07T13:19:11.957060,Abduction,128.8,81,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+SP_02_ADJUSTED,1,Right,2,10,2026-05-07T13:19:19.911021,Abduction,129.8,80,insufficient,FALSE,TRUE,TRUE,FALSE,Low,10,FALSE,FALSE,TRUE,0,0,0
+,,,,,,,,,,,,,,,,,,,,,
+# SESSION SUMMARY,,,,,,,,,,,,,,,,,,,,,
+# Total Reps: 20,,,,,,,,,,,,,,,,,,,,,
+# Correct ROM: 0 (0.0%),,,,,,,,,,,,,,,,,,,,,
+# Insufficient ROM: 20 (100.0%),,,,,,,,,,,,,,,,,,,,,
+# Average Peak Angle: 128.4°,,,,,,,,,,,,,,,,,,,,,
+# Average Duration: 86.3 frames,,,,,,,,,,,,,,,,,,,,,
+# Trunk Lean Detected: 18 reps (90.0%),,,,,,,,,,,,,,,,,,,,,
+# Shoulder Hiking Detected: 0 reps (0.0%),,,,,,,,,,,,,,,,,,,,,
+# Medium Deterioration Events: 0,,,,,,,,,,,,,,,,,,,,,
+# High Deterioration Events: 0,,,,,,,,,,,,,,,,,,,,,
+# Micro-Breaks Triggered: 0,,,,,,,,,,,,,,,,,,,,,
+# Stop Alerts: 0,,,,,,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,,,,,,
+# ANOMALIES DETECTED:,,,,,,,,,,,,,,,,,,,,,
+# - 2 rep(s) with unusually long duration (>100 frames):,,,,,,,,,,,,,,,,,,,,,
+#   Set 1, Rep 1: 130 frames,,,,,,,,,,,,,,,,,,,,
+#   Set 1, Rep 2: 107 frames,,,,,,,,,,,,,,,,,,,,
+# - High trunk lean rate: 90.0% (>50% threshold),,,,,,,,,,,,,,,,,,,,,

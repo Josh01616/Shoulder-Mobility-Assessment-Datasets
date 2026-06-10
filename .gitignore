@@ -1,0 +1,43 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific
+logs/*.csv
+data/videos/*.mp4
+data/videos/*.avi
+
+# Keep directory structure but ignore contents
+!logs/.gitkeep
+!data/.gitkeep
+!data/videos/.gitkeep
+
+# Jupyter Notebooks (if used later)
+.ipynb_checkpoints/
+
+# Environment variables
+.env

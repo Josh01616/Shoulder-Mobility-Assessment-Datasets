@@ -1,0 +1,63 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export
+# Participant ID: PT_05
+# Exercise Type: Flexion
+# Session Date: 2026-04-30 17:17:26
+# Affected Side: Left
+# Total Sets: 2
+# Session Notes: (none)
+# Average FPS: 19.5
+#
+# Flexion Block 1 Set 1 Baseline ROM: 169.7°
+# Flexion Block 1 Set 1 Baseline Duration: 95 frames
+# Flexion Block 1 Set 2 Baseline ROM: 167.3°
+# Flexion Block 1 Set 2 Baseline Duration: 104 frames
+# MediaPipe Model Complexity: 1
+# MediaPipe Detection Confidence: 0.5
+# MediaPipe Tracking Confidence: 0.5
+# Reps Per Set Target: 10
+# ROM Threshold (correct): ≥150°
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%
+# Sliding Window Size: 5 reps
+#
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+PT_05,1,Left,1,1,2026-04-30T17:14:39.207291,Flexion,171.9,85,correct,False,False,False,False,Low,,False,False,False,0,0,0
+PT_05,1,Left,1,2,2026-04-30T17:14:45.668285,Flexion,178.3,95,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,3,2026-04-30T17:14:52.879551,Flexion,169.7,99,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,4,2026-04-30T17:14:59.227633,Flexion,168.3,88,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,5,2026-04-30T17:15:05.857989,Flexion,163.4,89,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,6,2026-04-30T17:15:12.515687,Flexion,165.0,92,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,7,2026-04-30T17:15:19.567844,Flexion,164.3,96,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,8,2026-04-30T17:15:25.824591,Flexion,166.6,89,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,9,2026-04-30T17:15:32.407402,Flexion,169.7,90,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,1,10,2026-04-30T17:15:38.734864,Flexion,170.2,87,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,1,2026-04-30T17:16:01.521376,Flexion,175.0,88,correct,False,False,False,False,Low,,False,False,False,0,0,0
+PT_05,1,Left,2,2,2026-04-30T17:16:09.387388,Flexion,165.7,96,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,3,2026-04-30T17:16:17.165978,Flexion,167.3,104,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,4,2026-04-30T17:16:24.601791,Flexion,167.7,105,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,5,2026-04-30T17:16:31.783142,Flexion,164.5,98,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,6,2026-04-30T17:16:38.537985,Flexion,172.1,93,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,7,2026-04-30T17:16:46.145533,Flexion,167.1,100,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,8,2026-04-30T17:16:54.118428,Flexion,168.4,108,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,9,2026-04-30T17:17:01.513204,Flexion,166.8,105,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_05,1,Left,2,10,2026-04-30T17:17:09.745906,Flexion,166.4,110,correct,False,False,False,False,Low,10.0,False,False,False,0,0,0
+
+# SESSION SUMMARY
+# Total Reps: 20
+# Correct ROM: 20 (100.0%)
+# Insufficient ROM: 0 (0.0%)
+# Average Peak Angle: 168.4°
+# Average Duration: 95.8 frames
+# Trunk Lean Detected: 0 reps (0.0%)
+# Shoulder Hiking Detected: 0 reps (0.0%)
+# Medium Deterioration Events: 0
+# High Deterioration Events: 0
+# Micro-Breaks Triggered: 0
+# Stop Alerts: 0
+#
+# ANOMALIES DETECTED:
+# - 5 rep(s) with unusually long duration (>100 frames):
+#   Set 2, Rep 3: 104 frames
+#   Set 2, Rep 4: 105 frames
+#   Set 2, Rep 8: 108 frames
+#   Set 2, Rep 9: 105 frames
+#   Set 2, Rep 10: 110 frames

@@ -1,0 +1,59 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export
+# Participant ID: SP_02_ADJUSTED
+# Exercise Type: Flexion
+# Session Date: 2026-05-07 13:30:12
+# Affected Side: Right
+# Total Sets: 2
+# Session Notes: (none)
+# Average FPS: 13.1
+#
+# Flexion Block 1 Set 1 Baseline ROM: 129.3°
+# Flexion Block 1 Set 1 Baseline Duration: 90 frames
+# Flexion Block 1 Set 2 Baseline ROM: 124.7°
+# Flexion Block 1 Set 2 Baseline Duration: 76 frames
+# MediaPipe Model Complexity: 1
+# MediaPipe Detection Confidence: 0.5
+# MediaPipe Tracking Confidence: 0.5
+# Reps Per Set Target: 10
+# ROM Threshold (correct): ≥150°
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%
+# Sliding Window Size: 5 reps
+#
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+SP_02_ADJUSTED,1,Right,1,1,2026-05-07T13:22:17.482907,Flexion,127.2,111,insufficient,False,True,False,False,Low,,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,2,2026-05-07T13:22:25.876584,Flexion,126.6,90,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,3,2026-05-07T13:22:35.893062,Flexion,129.3,97,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,4,2026-05-07T13:22:43.487150,Flexion,131.5,79,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,5,2026-05-07T13:22:50.843029,Flexion,129.4,81,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,6,2026-05-07T13:22:57.970246,Flexion,127.2,79,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,7,2026-05-07T13:23:05.079131,Flexion,129.8,74,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,8,2026-05-07T13:23:11.148584,Flexion,124.0,60,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,9,2026-05-07T13:23:18.899481,Flexion,125.9,76,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,1,10,2026-05-07T13:23:26.834946,Flexion,124.4,74,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,1,2026-05-07T13:25:06.761896,Flexion,127.3,82,insufficient,False,True,False,False,Low,,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,2,2026-05-07T13:25:14.300967,Flexion,124.7,76,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,3,2026-05-07T13:25:21.399806,Flexion,123.3,72,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,4,2026-05-07T13:25:29.191922,Flexion,127.9,77,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,5,2026-05-07T13:25:37.412030,Flexion,127.7,79,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,6,2026-05-07T13:25:44.465196,Flexion,130.9,68,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,7,2026-05-07T13:25:52.207636,Flexion,131.9,74,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,8,2026-05-07T13:26:01.887056,Flexion,133.5,96,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,9,2026-05-07T13:26:09.662848,Flexion,127.8,75,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SP_02_ADJUSTED,1,Right,2,10,2026-05-07T13:26:18.162601,Flexion,136.2,83,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+
+# SESSION SUMMARY
+# Total Reps: 20
+# Correct ROM: 0 (0.0%)
+# Insufficient ROM: 20 (100.0%)
+# Average Peak Angle: 128.3°
+# Average Duration: 80.2 frames
+# Trunk Lean Detected: 0 reps (0.0%)
+# Shoulder Hiking Detected: 0 reps (0.0%)
+# Medium Deterioration Events: 0
+# High Deterioration Events: 0
+# Micro-Breaks Triggered: 0
+# Stop Alerts: 0
+#
+# ANOMALIES DETECTED:
+# - 1 rep(s) with unusually long duration (>100 frames):
+#   Set 1, Rep 1: 111 frames

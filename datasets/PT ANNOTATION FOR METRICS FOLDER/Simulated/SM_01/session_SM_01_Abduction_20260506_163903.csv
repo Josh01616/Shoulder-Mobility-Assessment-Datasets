@@ -1,0 +1,70 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export
+# Participant ID: SM_01
+# Exercise Type: Abduction
+# Session Date: 2026-05-06 16:44:19
+# Affected Side: Right
+# Total Sets: 3
+# Session Notes: (none)
+# Average FPS: 18.3
+#
+# Abduction Block 1 Set 1 Baseline ROM: 170.3°
+# Abduction Block 1 Set 1 Baseline Duration: 51 frames
+# Abduction Block 1 Set 2 Baseline ROM: 119.0°
+# Abduction Block 1 Set 2 Baseline Duration: 37 frames
+# Abduction Block 1 Set 3 Baseline ROM: 160.2°
+# Abduction Block 1 Set 3 Baseline Duration: 25 frames
+# MediaPipe Model Complexity: 1
+# MediaPipe Detection Confidence: 0.5
+# MediaPipe Tracking Confidence: 0.5
+# Reps Per Set Target: 10
+# ROM Threshold (correct): ≥150°
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%
+# Sliding Window Size: 5 reps
+#
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+SM_01,1,Right,1,1,2026-05-06T16:39:20.620940,Abduction,179.8,57,correct,False,True,True,False,Low,,False,False,False,0,0,0
+SM_01,1,Right,1,2,2026-05-06T16:39:25.753965,Abduction,179.6,64,correct,False,True,True,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,1,3,2026-05-06T16:39:29.714717,Abduction,170.3,49,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,1,4,2026-05-06T16:39:36.654999,Abduction,139.9,51,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,1,5,2026-05-06T16:39:43.991267,Abduction,180.0,50,correct,False,True,True,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,1,6,2026-05-06T16:39:48.376124,Abduction,102.4,34,insufficient,False,True,False,False,High,10.0,False,True,False,11.54,5.1,5
+SM_01,1,Right,1,7,2026-05-06T16:39:52.912392,Abduction,115.8,37,insufficient,False,True,False,False,High,10.0,False,True,False,17.94,0.0,5
+SM_01,1,Right,1,8,2026-05-06T16:39:57.284029,Abduction,108.4,36,insufficient,False,True,False,False,High,10.0,False,True,False,25.21,0.0,5
+SM_01,1,Right,1,9,2026-05-06T16:40:01.788196,Abduction,160.6,39,correct,False,True,True,True,Low,18.19,False,False,True,0,0,0
+SM_01,1,Right,1,10,2026-05-06T16:40:08.853978,Abduction,161.6,41,correct,False,True,True,True,Low,21.64,False,False,True,0,0,0
+SM_01,1,Right,2,1,2026-05-06T16:40:46.773271,Abduction,161.5,42,correct,False,True,True,True,Low,,False,False,False,0,0,0
+SM_01,1,Right,2,2,2026-05-06T16:40:51.401864,Abduction,172.7,44,correct,False,True,True,True,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,2,3,2026-05-06T16:40:55.348011,Abduction,119.0,37,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,2,4,2026-05-06T16:40:59.496578,Abduction,118.8,37,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,2,5,2026-05-06T16:41:04.262551,Abduction,169.1,44,correct,False,True,True,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,2,6,2026-05-06T16:41:08.588120,Abduction,95.9,34,insufficient,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,2,7,2026-05-06T16:41:12.941019,Abduction,172.9,46,correct,False,True,True,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,2,8,2026-05-06T16:41:17.982848,Abduction,171.5,35,correct,True,True,False,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,2,9,2026-05-06T16:41:22.432340,Abduction,178.4,34,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+SM_01,1,Right,2,10,2026-05-06T16:41:26.610320,Abduction,179.8,31,correct,True,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,3,1,2026-05-06T16:42:46.698211,Abduction,172.2,28,correct,False,True,False,False,Low,,False,False,False,0,0,0
+SM_01,1,Right,3,2,2026-05-06T16:42:49.835959,Abduction,160.2,24,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,3,3,2026-05-06T16:42:52.588489,Abduction,87.0,25,insufficient,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,3,4,2026-05-06T16:42:55.178129,Abduction,180.0,27,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,3,5,2026-05-06T16:42:57.651982,Abduction,91.2,21,insufficient,False,True,False,False,High,10.0,False,True,False,17.75,4.0,5
+SM_01,1,Right,3,6,2026-05-06T16:42:59.981786,Abduction,177.0,22,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,3,7,2026-05-06T16:43:02.749865,Abduction,101.3,21,insufficient,False,True,False,False,High,10.0,False,True,False,25.1,1.6,5
+SM_01,1,Right,3,8,2026-05-06T16:43:05.165431,Abduction,179.9,25,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+SM_01,1,Right,3,9,2026-05-06T16:43:07.550041,Abduction,101.2,21,insufficient,False,True,False,False,High,10.0,False,True,False,23.34,0.0,5
+SM_01,1,Right,3,10,2026-05-06T16:43:09.812665,Abduction,177.7,22,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+
+# SESSION SUMMARY
+# Total Reps: 30
+# Correct ROM: 19 (63.3%)
+# Insufficient ROM: 11 (36.7%)
+# Average Peak Angle: 148.9°
+# Average Duration: 35.9 frames
+# Trunk Lean Detected: 9 reps (30.0%)
+# Shoulder Hiking Detected: 4 reps (13.3%)
+# Medium Deterioration Events: 0
+# High Deterioration Events: 6
+# Micro-Breaks Triggered: 0
+# Stop Alerts: 6
+#
+# ANOMALIES DETECTED:
+# - None detected

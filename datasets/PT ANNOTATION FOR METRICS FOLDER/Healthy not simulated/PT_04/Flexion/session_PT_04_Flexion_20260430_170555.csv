@@ -1,0 +1,45 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export
+# Participant ID: PT_04
+# Exercise Type: Flexion
+# Session Date: 2026-04-30 17:07:31
+# Affected Side: Left
+# Total Sets: 2
+# Session Notes: (none)
+# Average FPS: 19.5
+#
+# Flexion Block 1 Set 1 Baseline ROM: 89.6°
+# Flexion Block 1 Set 1 Baseline Duration: 62 frames
+# MediaPipe Model Complexity: 1
+# MediaPipe Detection Confidence: 0.5
+# MediaPipe Tracking Confidence: 0.5
+# Reps Per Set Target: 10
+# ROM Threshold (correct): ≥150°
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%
+# Sliding Window Size: 5 reps
+#
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+PT_04,1,Left,1,1,2026-04-30T17:06:10.925643,Flexion,97.7,46,insufficient,False,False,False,False,Low,,False,False,False,0,0,0
+PT_04,1,Left,1,2,2026-04-30T17:06:37.878565,Flexion,86.9,71,insufficient,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_04,1,Left,1,3,2026-04-30T17:06:50.180167,Flexion,131.5,62,insufficient,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_04,1,Left,1,4,2026-04-30T17:06:56.182102,Flexion,89.6,34,insufficient,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_04,1,Left,1,5,2026-04-30T17:07:00.816722,Flexion,87.6,43,insufficient,True,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_04,1,Left,1,6,2026-04-30T17:07:11.866656,Flexion,105.1,59,insufficient,False,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_04,1,Left,1,7,2026-04-30T17:07:15.331256,Flexion,121.7,57,insufficient,True,False,False,False,Low,10.0,False,False,False,0,0,0
+PT_04,1,Left,1,8,2026-04-30T17:07:22.553815,Flexion,116.3,137,insufficient,True,False,False,False,Low,23.0,False,False,False,0,0,0
+
+# SESSION SUMMARY
+# Total Reps: 8
+# Correct ROM: 0 (0.0%)
+# Insufficient ROM: 8 (100.0%)
+# Average Peak Angle: 104.6°
+# Average Duration: 63.6 frames
+# Trunk Lean Detected: 0 reps (0.0%)
+# Shoulder Hiking Detected: 0 reps (0.0%)
+# Medium Deterioration Events: 0
+# High Deterioration Events: 0
+# Micro-Breaks Triggered: 0
+# Stop Alerts: 0
+#
+# ANOMALIES DETECTED:
+# - 1 rep(s) with unusually long duration (>100 frames):
+#   Set 1, Rep 8: 137 frames

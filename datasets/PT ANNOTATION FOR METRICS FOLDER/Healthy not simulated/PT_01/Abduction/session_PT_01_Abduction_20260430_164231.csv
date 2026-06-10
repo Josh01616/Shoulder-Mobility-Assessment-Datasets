@@ -1,0 +1,58 @@
+# Frozen-Shoulder Rehabilitation DSS - Session Export
+# Participant ID: PT_01
+# Exercise Type: Abduction
+# Session Date: 2026-04-30 16:45:17
+# Affected Side: Right
+# Total Sets: 2
+# Session Notes: (none)
+# Average FPS: 19.4
+#
+# Abduction Block 1 Set 1 Baseline ROM: 180.0°
+# Abduction Block 1 Set 1 Baseline Duration: 66 frames
+# Abduction Block 1 Set 2 Baseline ROM: 179.7°
+# Abduction Block 1 Set 2 Baseline Duration: 51 frames
+# MediaPipe Model Complexity: 1
+# MediaPipe Detection Confidence: 0.5
+# MediaPipe Tracking Confidence: 0.5
+# Reps Per Set Target: 10
+# ROM Threshold (correct): ≥150°
+# Deterioration Thresholds: Medium=10%, High=20%, Severe=30%
+# Sliding Window Size: 5 reps
+#
+participant_id,exercise_block,affected_side,set_number,rep_number,timestamp,exercise,peak_angle,duration_frames,rom_label,unscorable_flag,tracking_valid,trunk_lean_detected,shoulder_hiking_detected,fatigue_level,deterioration_score_Fi,micro_break_triggered,stop_triggered,form_cue_triggered,mean_rom_decline_pct,mean_dur_increase_pct,valid_reps_in_window
+PT_01,1,Right,1,1,2026-04-30T16:42:49.130118,Abduction,179.4,93,correct,False,True,False,False,Low,,False,False,False,0,0,0
+PT_01,1,Right,1,2,2026-04-30T16:42:54.623036,Abduction,179.9,73,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,3,2026-04-30T16:42:59.068429,Abduction,180.0,66,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,4,2026-04-30T16:43:03.615566,Abduction,180.0,66,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,5,2026-04-30T16:43:08.098785,Abduction,179.7,67,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,6,2026-04-30T16:43:12.705087,Abduction,179.6,73,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,7,2026-04-30T16:43:16.365913,Abduction,178.8,55,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,8,2026-04-30T16:43:20.047555,Abduction,179.8,56,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,9,2026-04-30T16:43:23.591427,Abduction,179.9,55,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,1,10,2026-04-30T16:43:27.198254,Abduction,179.6,53,correct,False,True,False,False,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,2,1,2026-04-30T16:43:52.538780,Abduction,179.9,49,correct,False,True,False,False,Low,,False,False,False,0,0,0
+PT_01,1,Right,2,2,2026-04-30T16:43:55.726119,Abduction,179.0,51,correct,False,True,False,True,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,2,3,2026-04-30T16:43:58.891312,Abduction,179.8,51,correct,False,True,False,True,Low,10.0,False,False,False,0,0,0
+PT_01,1,Right,2,4,2026-04-30T16:44:02.110584,Abduction,179.7,51,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_01,1,Right,2,5,2026-04-30T16:44:05.193320,Abduction,179.8,50,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_01,1,Right,2,6,2026-04-30T16:44:08.226403,Abduction,179.9,49,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_01,1,Right,2,7,2026-04-30T16:44:11.237729,Abduction,179.8,48,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_01,1,Right,2,8,2026-04-30T16:44:14.246726,Abduction,179.6,45,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+PT_01,1,Right,2,9,2026-04-30T16:44:17.242847,Abduction,179.2,47,correct,False,True,False,False,Low,10.0,False,False,True,0,0,0
+PT_01,1,Right,2,10,2026-04-30T16:44:20.053965,Abduction,175.8,44,correct,False,True,False,True,Low,10.0,False,False,True,0,0,0
+
+# SESSION SUMMARY
+# Total Reps: 20
+# Correct ROM: 20 (100.0%)
+# Insufficient ROM: 0 (0.0%)
+# Average Peak Angle: 179.5°
+# Average Duration: 57.1 frames
+# Trunk Lean Detected: 0 reps (0.0%)
+# Shoulder Hiking Detected: 8 reps (40.0%)
+# Medium Deterioration Events: 0
+# High Deterioration Events: 0
+# Micro-Breaks Triggered: 0
+# Stop Alerts: 0
+#
+# ANOMALIES DETECTED:
+# - None detected
